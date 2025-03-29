@@ -81,6 +81,7 @@ def register_and_login_user():
     return session
 
 def db_connection_for_user(db_conn):
+    """Функция для проверки пользователя в БД"""
   # Создаём курсор для выполнения SQL-запросов
     print(f"🔍 Проверка пользователя в БД...")
     cursor = db_conn.cursor()
@@ -96,6 +97,7 @@ def db_connection_for_user(db_conn):
 
 
 def db_connection_for_task(db_conn, task_id):
+    """Функция для проверки задачи в БД"""
   # Создаём курсор для выполнения SQL-запросов
     print(f"🔍 Проверка задачи с ID {task_id} в БД...")
     cursor = db_conn.cursor()
@@ -113,6 +115,7 @@ def db_connection_for_task(db_conn, task_id):
 
 
 def db_connection_for_deleted_task(db_conn, del_task_id):
+    """Функция для проверки удаления задачи из БД"""
     print(f"🔍 Проверка УДАЛЕНИЯ задачи {del_task_id} из БД...")
     cursor = db_conn.cursor()
     cursor.execute('SELECT id, title, description, completed FROM "task" WHERE id = %s', (del_task_id,))

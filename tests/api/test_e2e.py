@@ -52,9 +52,9 @@ def test_e2e_scenario(db_connection):
         got_task.get_task(created_task_id, session)
         got_task.check_task_get()
 
+    # проверка, что задача записана в БД
     with allure.step("Проверка, что задача записана в БД"):
         db_connection_for_task(db_connection, created_task_id)
-
 
 
     # обновление задачи
@@ -79,6 +79,7 @@ def test_e2e_scenario(db_connection):
         del_task.delete_task(created_task_id, session)
         del_task.check_task_delete()
 
+    # проверка, что задача удалена из БД
     with allure.step("Проверка, что задача удалена из БД"):
         db_connection_for_deleted_task(db_connection, created_task_id)
 
