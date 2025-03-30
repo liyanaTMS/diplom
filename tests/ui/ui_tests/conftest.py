@@ -18,7 +18,6 @@ def driver():
     config_driver.quit()
 
 
-
 DB_PARAMS = {
     'dbname': os.environ.get('POSTGRES_DB', 'taskmanager'),
     'user': os.environ.get('POSTGRES_USER', 'postgres'),
