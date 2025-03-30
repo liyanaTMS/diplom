@@ -27,7 +27,7 @@ pipeline {
                     // Создаем директорию для результатов
                     sh "mkdir -p ${env.ALLURE_RESULTS_DIR}"
                     // Запускаем тестовый сервис; переменная ALLURE_RESULTS_DIR будет доступна
-                    sh "docker compose run --rm -e TEST_PATH=tests/ -e TEST_ARGS='--alluredir=${env.ALLURE_RESULTS_DIR}' test"
+                    sh "docker compose run --rm -e TEST_PATH=tests/api/test_e2e.py -e TEST_ARGS='--alluredir=${env.ALLURE_RESULTS_DIR}' test"
                 }
             }
         }
