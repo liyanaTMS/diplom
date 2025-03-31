@@ -68,7 +68,6 @@ def register_and_login_user():
         "password": "123456"
     }
     # 1 регистрация пользователя
-
     new_user = RegisterUser()
     new_user.new_user(test_user_data)
     print("New user was created via fixture")
