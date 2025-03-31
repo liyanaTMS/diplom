@@ -1,15 +1,7 @@
-import os
-
 from allure_commons.types import AttachmentType
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
 import pytest
 from tests.ui.pages.login_page import LoginPage
-from tests.ui.pages.register_page import RegisterPage
 import allure
-
 from tests.ui.pages.task_page import TaskPage
 
 
@@ -58,34 +50,5 @@ def test_user_login(driver, db_connection, name, password):
             on_task_page = TaskPage(driver)
             assert on_task_page.get_success_message(), "Пользователь не перешел на старницу задач"
             assert "Вы успешно вошли в систему" in on_task_page.get_success_message(), "Ошибка в сообщении об успешном входе в систему"
-
-
-
-
-# def test_valid_login(name, password):
-#     # Настройка опций Chrome
-#     options = Options()
-#     options.add_argument("--start-maximized")
-#     service = Service(ChromeDriverManager(driver_version="134.0.6998.89").install())
-#     driver = webdriver.Chrome(service=service, options=options)
-#     try:
-#         # Используем localhost для локального запуска
-#         url = os.environ.get('APP_URL', 'http://localhost:5000')
-#         driver.get(url)
-#
-#         login_page = LoginPage(driver)
-#         login_page.open_url("http://localhost:5000/login")
-#         login_page.enter_username(name)
-#         login_page.enter_password(password)
-#         login_page.click_login()
-#         if name == 'liyana':
-#             assert "http://localhost:5000/tasks" == driver.current_url, "Ошибка: логин удался"
-#         else:
-#             assert "tasks" in driver.current_url, "Ошибка: логин не удался"
-#
-#     finally:
-#         # Закрываем драйвер в блоке finally, чтобы гарантировать его закрытие
-#         driver.quit()
-
 
 

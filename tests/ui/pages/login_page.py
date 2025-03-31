@@ -5,10 +5,8 @@ from tests.ui.pages.base_page import BasePage
 class LoginPage(BasePage):
     FORM_NAME = (By.CSS_SELECTOR, '[class ="tasks-title"]')
     USERNAME_INPUT = (By.CSS_SELECTOR, '[data-testid="username-input"]')
-    #USERNAME_INPUT1 = (By.ID, "username")
     USERNAME_LABEL = (By.CSS_SELECTOR, '[data-testid="username-label"]')
     PASSWORD_INPUT = (By.CSS_SELECTOR, '[data-testid="password-input"]')
-    #PASSWORD_INPUT1 = (By.ID, "password")
     PASSWORD_LABEL = (By. CSS_SELECTOR, '[data-testid="password-label"]')
     LOGOUT_MENU = (By.CSS_SELECTOR, '[data-testid="nav - logout"]')
     LABEL_MENU = (By.CSS_SELECTOR, '[data-testid="navbar-brand"]')

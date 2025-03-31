@@ -1,10 +1,4 @@
-import os
-
 from allure_commons.types import AttachmentType
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
 import pytest
 from tests.ui.pages.login_page import LoginPage
 from tests.ui.pages.register_page import RegisterPage

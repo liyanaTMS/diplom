@@ -1,6 +1,5 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 
 
 class BasePage():
@@ -23,8 +22,3 @@ class BasePage():
         element = self.find_element(locator, timeout)
         element.clear()
         element.send_keys(text)
-
-    # def clear_field(self, locator, text, timeout=10):
-    #     element = self.find_element(locator, timeout)
-    #     element.clear()
-    #     element.send_keys(text)

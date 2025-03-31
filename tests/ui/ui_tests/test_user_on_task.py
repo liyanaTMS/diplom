@@ -8,7 +8,7 @@ from tests.ui.pages.task_page import TaskPage
 @allure.feature("Пользователь на странице задач")
 @allure.story("Переход на страницу задач, проверка имени и логаут")
 def test_user_on_tasks(driver, db_connection):
-    # заранее созданный юзер
+    # данный юзер будет регистрироваться в тесте
     name = "test"
     password = "12121212"
     # Навигация на страницу регистрации и регистрация
@@ -20,14 +20,11 @@ def test_user_on_tasks(driver, db_connection):
     # Навигация на логин страницу и авторизация
     with allure.step("Навигация на логин страницу и авторизация"):
         on_task_page = LoginPage(driver)
-
         on_task_page.get_login_page()
         on_task_page.valid_login(name, password)
     # Проверка сообщения об успешной авторизации
     with allure.step("Проверка сообщения об успешной авторизации"):
         allure.attach(driver.get_screenshot_as_png(), name="Успешная авторизация", attachment_type=AttachmentType.PNG)
-        #screenshot(path=f"../output/screenshots/test_user_on_task/screenshot.png")
-        #allure.attach()
         task_page = TaskPage(driver)
         assert task_page.get_success_message() == "Вы успешно вошли в систему", "Ошибка в сообщении об успешном входе в систему"
     # Проверка имени юзера в системе
@@ -43,6 +40,3 @@ def test_user_on_tasks(driver, db_connection):
         assert "login" in driver.current_url, "Пользователь не вернулся на старницу логина"
         on_task_page_again = LoginPage(driver)
         assert "Вы вышли из системы" in on_task_page_again.get_info_message(), "Ошибка в сообщении о выходе из системы"
-
-
-

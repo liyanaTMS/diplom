@@ -24,9 +24,6 @@ class RegisterPage(BasePage):
     def enter_username(self, username):
         self.enter_text(self.USERNAME_INPUT, username)
 
-    # def clear_username(self, username):
-    #     self.clear(self.USERNAME_INPUT, username)
-
     def enter_password(self, password):
         self.enter_text(self.PASSWORD_INPUT, password)
 
@@ -46,7 +43,6 @@ class RegisterPage(BasePage):
         return self.find_element(self.SUCCESS_MESSAGE).text
 
     def valid_registration(self, username, password):
-       # self.get_register_page()
         self.enter_username(username)
         self.enter_password(password)
         self.click_register_btn()
