@@ -17,11 +17,8 @@ def test_update_task(register_and_login_user):
 
     up_task.update_task_for404(created_task_id, invalid_task_payload, register_and_login_user)
     print("Update task (response 400): Неверный запрос")
-    up_task.check_response_is_(400)
+    up_task.check_response_is_(400) # Баг в приложении. При невалидном task-payloade возвращает 200.
 
     up_task.update_task_for404(55555, valid_task_payload, register_and_login_user)
     print("Update task (response 404): Задача не найдена")
     up_task.check_response_is_(404)
-
-
-

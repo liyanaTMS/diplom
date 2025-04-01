@@ -1,14 +1,10 @@
-import pytest
 from tests.api.api_endpoints.login_user import LoginUser
 from tests.api.api_endpoints.register_user import RegisterUser
 from tests.api.payload.payload import valid_user_payload, valid_task_payload
-
 import os
 import pytest
-import allure
 import requests
 import psycopg2
-
 
 URL = "http://web:5000/api/" # для докера
 
@@ -42,19 +38,16 @@ def db_connection():
     cur.execute(sql_delete)
     # Фиксируем изменения
     conn.commit()
-
     # Узнаем, сколько строк было удалено
     rows_deleted = cur.rowcount
     print(f"Удалено строк: {rows_deleted}")
-    # print(f"🔍 Удаление пользователя {valid_user_payload['username']} из БД...")
-    # cursor.execute('DELETE FROM "user" WHERE username = %s', (valid_user_payload["username"],))
-    # conn.commit()
-    # print(f"🔍 Проверка УДАЛЕНИЯ пользователя из БД...")
-    # cursor.execute('SELECT username, password FROM "user" WHERE username = %s', (valid_user_payload["username"],))
-    # del_user = cursor.fetchone()
-    # cursor.close()
-    # assert del_user is None, f" ❌ Удаленный пользователь найден в БД: ID {valid_user_payload['username']}"
-    # print(f"✅ Удаленный пользователь {valid_user_payload['username']} не найден в БД! ")
+
+    print(f"🔍 Проверка УДАЛЕНИЯ пользователей из БД...")
+    cur.execute('SELECT username, password FROM "user"')
+    del_user = cur.fetchone()
+    cur.close()
+    assert del_user is None, f" ❌ Удаленные пользователи найдены в БД"
+    print(f"✅ Удаленные пользователи не найдены в БД! ")
 
     conn.close()  # Закрываем соединение после теста
     print("🔌 Соединение с БД закрыто.")
@@ -78,6 +71,7 @@ def register_and_login_user():
     log_user.login_user(test_user_data, session)
     print("New user was logged in via fixture ")
     return session
+
 
 def db_connection_for_user(db_conn):
     """Функция для проверки пользователя в БД"""
@@ -122,19 +116,3 @@ def db_connection_for_deleted_task(db_conn, del_task_id):
     cursor.close()
     assert task is None, f" ❌ Удаленная задача найдена в БД: ID {del_task_id}"
     print(f"✅ Удаленная задача {del_task_id} не найдена в БД! ")
-
-
-
-
-# @pytest.fixture
-# def authenticated_user():
-#     auth = AuthenticateUser()
-#     auth.login_user(valid_user)
-#     auth.check_response_is_200()
-#     return auth
-
-@pytest.fixture(params=[
-    (valid_user_payload, True)
-])
-def test_data(request):
-    return request.param

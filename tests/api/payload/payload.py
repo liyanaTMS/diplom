@@ -1,5 +1,5 @@
 valid_user_payload = {
-   "username": "anna68",
+   "username": "anna92",
     "password": "test"
 }
 
@@ -16,9 +16,15 @@ invalid_user_payload1 = {
 }
 
 valid_task_payload = {
-   "title": "task3",
+   "title": "task5",
     "description": "test task",
     "completed": True
+}
+
+changed_status_valid_task_payload = {
+   "title": "task5",
+    "description": "test task",
+    "completed": False
 }
 
 invalid_task_payload = {
@@ -29,7 +35,7 @@ invalid_task_payload = {
 
 
 valid_update_task_payload = {
-   "title": "task1",
+   "title": "task2",
     "description": "change ID",
     "completed": True
 }

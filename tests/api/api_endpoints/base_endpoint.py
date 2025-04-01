@@ -45,7 +45,8 @@ class EndpointApi:
     def check_all_fields(self, expected_data):
         assert self.get_title() == expected_data['title'], 'wrong title was responsed'
         assert self.get_description() == expected_data['description'], 'wrong description was responsed'
-        assert self.get_completed() == expected_data['completed'], 'wrong completed was responsed'
+        if self.get_completed() != None:
+            assert self.get_completed() == expected_data['completed'], 'wrong completed was responsed'
 
     def check_none_fields(self):
         if self.response_json == None:

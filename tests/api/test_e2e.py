@@ -19,14 +19,12 @@ def test_e2e_scenario(db_connection):
     # создание usera
     with allure.step("Регистрация пользователя"):
         new_user = RegisterUser()
-        a = new_user.new_user(valid_user_payload)
-        print(f"*****************************следующий юзер был создан:", a )
+        new_user.new_user(valid_user_payload)
         new_user.check_user_register()
 
-
+    # проверка, что user записан в БД
     with allure.step("Проверка пользователя в БД"):
         db_connection_for_user(db_connection)
-
 
     # аутентификация  usera
     with allure.step("Аутентификация пользователя"):
@@ -56,7 +54,6 @@ def test_e2e_scenario(db_connection):
     with allure.step("Проверка, что задача записана в БД"):
         db_connection_for_task(db_connection, created_task_id)
 
-
     # обновление задачи
     with allure.step("Обновление задачи"):
         print("---------Обновление задачи по ID:")
@@ -70,7 +67,6 @@ def test_e2e_scenario(db_connection):
         ch_task = ChangeTask()
         ch_task.change_task(created_task_id, valid_task_payload, session)
         ch_task.check_task_change()
-
 
     # удаление задачи
     with allure.step("Удаление задачи"):
