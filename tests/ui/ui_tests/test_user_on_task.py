@@ -9,7 +9,7 @@ from tests.ui.pages.task_page import TaskPage
 @allure.story("Переход на страницу задач, проверка имени и логаут")
 def test_user_on_tasks(driver, db_connection):
     # данный юзер будет регистрироваться в тесте
-    name = "test"
+    name = "test0"
     password = "12121212"
     # Навигация на страницу регистрации и регистрация
     with allure.step("Навигация на страницу регистрации и регистрация"):
