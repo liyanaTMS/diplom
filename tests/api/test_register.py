@@ -14,7 +14,7 @@ def test_register_user():
     print("User creation (response 400): Неверный запрос или пользователь уже существует")
 
     new_user.new_user(invalid_user_payload)
-
+    print("User creation (response 400): Неверный запрос или пользователь уже существует")
 
 
 

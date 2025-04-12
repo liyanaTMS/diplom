@@ -13,6 +13,9 @@ class LoginUser(EndpointApi):
         self.response_json = self.response.json()
         print(f"User {payload} was logged in the system : ", self.response_json)
         return session
+
+    # allure.attach(str(new_invalid_task_by_auth_user.response.json()), name="Task Response",
+    #               attachment_type=allure.attachment_type.JSON)
     
 
     def check_user_login(self):

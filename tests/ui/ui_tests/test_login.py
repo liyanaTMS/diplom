@@ -3,21 +3,29 @@ import pytest
 from tests.ui.pages.login_page import LoginPage
 import allure
 from tests.ui.pages.task_page import TaskPage
-
+from tests.ui.pages.register_page import RegisterPage
 
 @pytest.mark.parametrize(
-    ("name", "password"), [
+    ("p_name", "p_password"), [
         ('test1', '12121212'), # созданный заранее юзер
-        ('', 'password'),
-        ('username', ''),
-        ('', '')
+        ('', 'password'), # невалидный юзер
+        ('username', ''), # невалидный юзер
+        ('', '') # невалидный юзер
     ]
 )
 
 @allure.feature("Логин пользователя")
 @allure.story("Логин пользователя с различными кредами")
-def test_user_login(driver, db_connection, name, password):
-    # Настройка опций Chrome
+def test_user_login(driver, db_connection, p_name, p_password):
+    name = "test1"
+    password = "12121212"
+    # Навигация на страницу регистрации и создание тестового юзера "test1"
+    register_page = RegisterPage(driver)
+    register_page.get_register_page()
+    register_page.valid_registration(name, password)
+
+
+    # Навигация на логин страницу и авторизация
     with allure.step("Навигация на логин страницу и авторизация"):
         login_page = LoginPage(driver)
         login_page.get_login_page()
@@ -25,8 +33,8 @@ def test_user_login(driver, db_connection, name, password):
 
     # Заполнение полей
     with allure.step("Ввод пользователя и пароля"):
-        login_page.enter_username(name)
-        login_page.enter_password(password)
+        login_page.enter_username(p_name)
+        login_page.enter_password(p_password)
     # Нажатие кнопки Войти
     with allure.step("Нажать кнопку Войти"):
         login_page.click_login()
@@ -34,11 +42,11 @@ def test_user_login(driver, db_connection, name, password):
     # Валидация логина
     with allure.step("Валидация логина"):
         # Если вводятся невалидные данные
-        if name == '':
+        if p_name == '':
             assert login_page.get_error_message() == "Имя пользователя обязательно", "Авторизация без пользователя.Неправильное сообщение об ошибке"
-        elif password == '':
+        elif p_password == '':
             assert login_page.get_error_message() == "Пароль обязателен", "Авторизация без пароля. Неправильное сообщение об ошибке"
-        elif password == '' and name == '':
+        elif p_password == '' and p_name == '':
             assert login_page.get_error_message() == "Пароль обязателен", "Авторизация без пароля. Неправильное сообщение об ошибке"
             assert login_page.get_error_message() == "Имя пользователя обязательно", "Авторизация без пользователя. Неправильное сообщение об ошибке"
         # Если ввели валидного созданного заранее юзера

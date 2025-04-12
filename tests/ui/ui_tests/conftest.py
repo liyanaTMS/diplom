@@ -5,6 +5,11 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from tests.api.api_endpoints.register_user import RegisterUser
+# from tests.api.api_endpoints.base_endpoint import url
+import requests
+import time
+from tests.api.api_endpoints.base_endpoint import EndpointApi
 # from webdriver_manager.chrome import ChromeDriverManager # Comment for docker
 
 @pytest.fixture
@@ -35,11 +40,18 @@ def db_connection():
     sql_delete = 'DELETE FROM "task"'
     print(f"🔍 Удаление всех задач из БД... ")
     cur.execute(sql_delete)
-    sql_delete =  """DELETE FROM "user" WHERE username != 'test1'"""
+    # sql_delete =  """DELETE FROM "user" WHERE username != 'test1'"""
+    sql_delete = 'DELETE FROM "user"'
     print(f"🔍 Удаление всех пользователей из БД... (кроме test1) ")
     cur.execute(sql_delete)
+    # Узнаем, сколько строк было удалено
+    rows_deleted = cur.rowcount
+    print(f"Удалено строк: {rows_deleted}")
+
+
     print(f"🔍 Проверка УДАЛЕНИЯ пользователей из БД...")
-    cur.execute('SELECT username, password FROM "user" WHERE username != %s', ('test1',))
+    #cur.execute('SELECT username, password FROM "user" WHERE username != %s', ('test1',))
+    cur.execute('SELECT username, password FROM "user"')
     del_user = cur.fetchone()
     cur.close()
     assert del_user is None, f" ❌ Удаленные пользователи найдены в БД"
@@ -47,9 +59,26 @@ def db_connection():
     # Фиксируем изменения
     conn.commit()
 
-    # Узнаем, сколько строк было удалено
-    rows_deleted = cur.rowcount
-    print(f"Удалено строк: {rows_deleted}")
 
     conn.close()  # Закрываем соединение после теста
     print("🔌 Соединение с БД закрыто.")
+
+
+
+@pytest.fixture(scope="function")
+def register_user():
+    """Фикстура для регистрации тестового пользователя"""
+    test_user_data = {
+        "username": "test1",
+        "password": "12121212"
+    }
+    # регистрация пользователя
+    new_user = RegisterUser()
+    response = requests.post(f"http://web:5000/api/register", json=test_user_data)
+    response_json = response.json()
+    if response.status_code == 400:
+        print(response_json)
+    else:
+        print("New test user was created: ", response_json)
+        new_user.new_user(test_user_data)
+        print("Test user {test1, 12121212} was created via fixture")

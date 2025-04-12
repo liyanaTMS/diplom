@@ -8,7 +8,7 @@ class EndpointApi:
     response_status = None
     #session = default_session
     schema = {}
-    # url = "http://localhost:5000/api/" для  локльаного запуска
+    # url = "http://localhost:5000/api/" для  локального запуска
     url = "http://web:5000/api/" # для докера
 
     def check_response_is_(self, value):
@@ -55,12 +55,3 @@ class EndpointApi:
             print("Response:", self.response_json)
 
 
-    def check_response_is_201(self):
-        assert self.response.status_code == 201, \
-            f'Expected 201, got {self.response.status_code}'
-
-
-
-    def check_response_is_204(self):
-        assert self.response.status_code == 204, \
-            f'Expected 204, got {self.response.status_code}'
