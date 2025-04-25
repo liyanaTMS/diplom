@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="46af5d87-0abb-461f-9e96-199aa12035ec" name="Changes" comment="15 commit (11 files were changed, api + ui)">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CI/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CI/README_CI_JENKINS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile.linter" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JenkinsfileLinter" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/swagger.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/create_task.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edit_task.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tasks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/view_task.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Dockerfile.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/README_TESTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_db_connection.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="example" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;liyanaTMS&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/liyanaTMS/diplom.git&quot;,
+    &quot;accountId&quot;: &quot;706aad1c-3f57-4ca1-be36-4186f23532f4&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2uGzBfKJeYuUE6gE4ZhdnyW7IJO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_api.test_create_user.executor": "Run",
+    "Python tests.Python tests for test_change_task.test_change_task.executor": "Run",
+    "Python tests.Python tests for test_create_task.test_create_task.executor": "Run",
+    "Python tests.Python tests for test_delete_task.test_delete_task.executor": "Run",
+    "Python tests.Python tests for test_e2e.test_e2e_scenario.executor": "Run",
+    "Python tests.Python tests for test_etoe.test_e2e_scenario.executor": "Run",
+    "Python tests.Python tests for test_ex_local.test_web_api.executor": "Run",
+    "Python tests.Python tests for test_get_task.test_create_task.executor": "Run",
+    "Python tests.Python tests for test_login.test_login_user.executor": "Run",
+    "Python tests.Python tests for test_login.test_user_login.executor": "Run",
+    "Python tests.Python tests for test_login.test_valid_login.executor": "Run",
+    "Python tests.Python tests for test_register.test_create_user.executor": "Run",
+    "Python tests.Python tests for test_register.test_user_registration.executor": "Run",
+    "Python tests.Python tests for test_update_task.test_get_task.executor": "Run",
+    "Python tests.Python tests for test_update_task.test_update_task.executor": "Run",
+    "Python tests.Python tests for test_user_on_task.test_user_on_tasks.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="RunManager" selected="Python tests.Python tests for test_login.test_user_login">
+    <configuration name="Python tests for test_e2e.test_e2e_scenario" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="cloned_flask" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/api" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_e2e.test_e2e_scenario&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_login.test_user_login" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="cloned_flask" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/ui/ui_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login.test_user_login&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_login.test_valid_login" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="cloned_flask" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/ui/ui_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login.test_valid_login&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_register.test_user_registration" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="cloned_flask" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/ui/ui_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_register.test_user_registration&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_user_on_task.test_user_on_tasks" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="cloned_flask" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/ui/ui_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_user_on_task.test_user_on_tasks&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for test_user_on_task.test_user_on_tasks" />
+        <item itemvalue="Python tests.Python tests for test_register.test_user_registration" />
+        <item itemvalue="Python tests.Python tests for test_login.test_valid_login" />
+        <item itemvalue="Python tests.Python tests for test_login.test_user_login" />
+        <item itemvalue="Python tests.Python tests for test_e2e.test_e2e_scenario" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46af5d87-0abb-461f-9e96-199aa12035ec" name="Changes" comment="" />
+      <created>1741889566848</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741889566848</updated>
+    </task>
+    <task id="LOCAL-00001" summary="1 run test">
+      <option name="closed" value="true" />
+      <created>1741890598089</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741890598089</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1 commit (29 files, Docker and requirements)">
+      <option name="closed" value="true" />
+      <created>1743157404036</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743157404036</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2 commit (2 files, comments were added, tests/api/test_e2e.py and conftest.py)">
+      <option name="closed" value="true" />
+      <created>1743255881471</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743255881471</updated>
+    </task>
+    <task id="LOCAL-00004" summary="3 commit (Dockerfile.test)">
+      <option name="closed" value="true" />
+      <created>1743339293224</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743339293224</updated>
+    </task>
+    <task id="LOCAL-00005" summary="3 commit (ui/conftest.py)">
+      <option name="closed" value="true" />
+      <created>1743340752810</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743340752811</updated>
+    </task>
+    <task id="LOCAL-00006" summary="5 commit (Jenkinsfile)">
+      <option name="closed" value="true" />
+      <created>1743349071162</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743349071162</updated>
+    </task>
+    <task id="LOCAL-00007" summary="6 commit (ui/conftest.py was shortened)">
+      <option name="closed" value="true" />
+      <created>1743414961257</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743414961257</updated>
+    </task>
+    <task id="LOCAL-00008" summary="7 commit (ui/base_page.py, login_page.py,register_page.py,test_login.py, test_register.py, test_user_on_task.py were cleaned)">
+      <option name="closed" value="true" />
+      <created>1743418089058</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743418089058</updated>
+    </task>
+    <task id="LOCAL-00009" summary="9 commit (api /conftest.py)">
+      <option name="closed" value="true" />
+      <created>1743425001927</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743425001927</updated>
+    </task>
+    <task id="LOCAL-00010" summary="10 commit (Jenkins)">
+      <option name="closed" value="true" />
+      <created>1743425617819</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743425617819</updated>
+    </task>
+    <task id="LOCAL-00011" summary="11 commit (12 api files)">
+      <option name="closed" value="true" />
+      <created>1743512983237</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1743512983237</updated>
+    </task>
+    <task id="LOCAL-00012" summary="12 commit (Jenkins about UI tests)">
+      <option name="closed" value="true" />
+      <created>1743516589739</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1743516589739</updated>
+    </task>
+    <task id="LOCAL-00013" summary="13 commit (Jenkins about API tests)">
+      <option name="closed" value="true" />
+      <created>1743517353344</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1743517353344</updated>
+    </task>
+    <task id="LOCAL-00014" summary="14 commit (test_user_on_task.py , test0/12121212)">
+      <option name="closed" value="true" />
+      <created>1743519777038</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1743519777038</updated>
+    </task>
+    <task id="LOCAL-00015" summary="15 commit (11 files were changed, api + ui)">
+      <option name="closed" value="true" />
+      <created>1744498775190</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1744498775190</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1 run test" />
+    <MESSAGE value="1 commit (29 files, Docker and requirements)" />
+    <MESSAGE value="2 commit (2 files, comments were added, tests/api/test_e2e.py and conftest.py)" />
+    <MESSAGE value="3 commit (Dockerfile.test)" />
+    <MESSAGE value="3 commit (ui/conftest.py)" />
+    <MESSAGE value="5 commit (Jenkinsfile)" />
+    <MESSAGE value="6 commit (ui/conftest.py was shortened)" />
+    <MESSAGE value="7 commit (ui/base_page.py, login_page.py,register_page.py,test_login.py, test_register.py, test_user_on_task.py were cleaned)" />
+    <MESSAGE value="9 commit (api /conftest.py)" />
+    <MESSAGE value="10 commit (Jenkins)" />
+    <MESSAGE value="11 commit (12 api files)" />
+    <MESSAGE value="12 commit (Jenkins about UI tests)" />
+    <MESSAGE value="13 commit (Jenkins about API tests)" />
+    <MESSAGE value="14 commit (test_user_on_task.py , test0/12121212)" />
+    <MESSAGE value="15 commit (11 files were changed, api + ui)" />
+    <option name="LAST_COMMIT_MESSAGE" value="15 commit (11 files were changed, api + ui)" />
+  </component>
+</project>
